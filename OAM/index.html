@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css"></link>
+    <link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css"></link>
+    <link href="css/styles.css" rel="stylesheet" type="text/css"></link>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/1to1scripts.js"></script>
+    <script src="js/manyto1scripts.js"></script>
+    <title>Online Energy Assessment Demo</title>
+  </head>
+     <div class="container">
+       <h2>Online Energy Assessment - Logic Engine Demonstration</h2>
+     </div>
+     <div class="row">
+    <div class="col-sm-6 first-column">
+      <form id="questions">
+       <h3>About you section</h3>
+           <label for="q101"><abbr title="Words">What are you interested in learning?</abbr></label>
+           <select id="q101">
+             <option selected disabled hidden style='display: none' value=''></option>
+             <option value="a101_01" abbr title= "it will help">How to improve my home's energy efficiency</abbr></option>
+             <option value="a101_02">How to improve my home's comfort</option>
+             <option value="a101_03">How to improve my home's health and safety</option>
+           </select>
+
+           <br>
+
+           <label for="q102">In what type of home do you live?</label>
+           <select id="q102">
+             <option selected disabled hidden style='display: none' value=''></option>
+             <option value="a102_01">Manufactured home</option>
+             <option value="a102_02">Single family home (detached)</option>
+             <option value="a102_03">\\Duplex/Triplex/Fourplex\\</option>
+             <option value="a102_04">\\Townhouse/Rowhouse (side-by-side)\\</option>
+             <option value="a102_05">\\Condominium (low or high-rise)\\</option>
+             <option value="a102_06">\\Apartment\\</option>
+           </select>
+
+          <br>
+
+          <label for="q103">Do you own or rent your home?</label>
+          <select id="q103">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="a103_01">I own my home</option>
+            <option value="a103_02">I rent my home</option>
+            <option value="a103_03">I'm a landlord/property manager of this home</option>
+          </select>
+
+          <br>
+
+          <label for="q104">How long have you resided in your home?</label>
+          <select id="q104">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="a104_01">Less than a year</option>
+            <option value="a104_02">1-3 years</option>
+            <option value="a104_03">3-10 years</option>
+            <option value="a104_04">10+ years</option>
+          </select>
+
+          <br>
+
+          <label for="q105">Does your household conduct do-it-yourself (DIY) projects?</label>
+          <select id="q105">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="a105_01">Yes, often</option>
+            <option value="a105_02">//Yes, rarely//</option>
+            <option value="a105_03">//No, but interested in learning how//</option>
+            <option value="a105_04">No, I prefer hiring professionals</option>
+          </select>
+
+          <br>
+
+          <label for="q106">What is the address of your home? (this will validate via ETO Integration and determine utility)</label>
+          <select id="q106">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="a106_01">PGE</option>
+            <option value="a106_02">PAC</option>
+            <option value="a106_03">NWN</option>
+            <option value="a106_04">CNG</option>
+            <option value="a106_05">AVI</option>
+          </select>
+
+          <br>
+
+          <label for="q107">What is your annual household income?</label>
+          <select id="q107">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="a107_01">$25,760 - $55,610</option>
+            <option value="a107_02">$34,840 - $72,722</option>
+            <option value="a107_03">\\$43,920 - $89,832\\</option>
+            <option value="a107_04">\\$53,000 - $106,944\\</option>
+            <option value="a107_05">\\$62,080 - $124,056\\</option>
+            <option value="a107_06">\\$71,160 - $141,166\\</option>
+            <option value="a107_07">\\$80,240 - $144,374\\</option>
+            <option value="a107_08">\\$89,320 - $147,582\\</option>
+            <option value="a108_10">Skip/I prefer not to answer</option>
+          </select>
+          <br>
+
+          <label for="q108">How many full-time residents live in your home?</label>
+          <select id="q108">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="a108_01">1</option>
+            <option value="a108_02">2</option>
+            <option value="a108_03">3</option>
+            <option value="a108_04">4</option>
+            <option value="a108_05">5</option>
+            <option value="a108_06">6</option>
+            <option value="a108_07">7</option>
+            <option value="a108_08">8</option>
+            <option value="a108_09">8+</option>
+            <option value="a108_10">Skip/I prefer not to answer</option>
+          </select>
+
+          <br>
+
+          <label for="q109">Which categories best describe the race, ethnicity or origin of the residents in your home?</label>
+          <select id="q109">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="a109_01">Black or African American</option>
+            <option value="a109_02">Chinese</option>
+            <option value="a109_03">Filipino</option>
+            <option value="a109_04">Hispanic, Latino or Spanish</option>
+            <option value="a109_05">Japanese</option>
+            <option value="a109_06">Korean</option>
+            <option value="a109_07">Middle Eastern or North African</option>
+            <option value="a109_08">Native American or Alaska Native</option>
+            <option value="a109_09">Native Hawaiian or Other Pacific Islander</option>
+            <option value="a109_10">South Asian or Indian</option>
+            <option value="a109_11">Vietnamese</option>
+            <option value="a109_12">Other Asian Origin</option>
+            <option value="a109_13">White, Caucasian, or European</option>
+            <option value="a109_14">Other race, ethinicity, or origin</option>
+            <option value="a109_15">Skip/I prefer not to answer</option>
+          </select>
+
+          <br>
+       <h3>Home qualities</h3>
+          <label for="q201">What year was your home built?</label>
+          <select id="q201">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="a201_01">Before 1978</option>
+            <option value="a201_02">1979 - 2008</option>
+            <option value="a201_03">After 2009</option>
+            <option value="a201_04">Skip/I don't know</option>
+          </select>
+
+          <br>
+
+          <label for="q202">What is the approximate square footage of your home?</label>
+          <select id="q202">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="a202_01">Less than 500</option>
+            <option value="a202_02">501 - 1,000</option>
+            <option value="a202_03">1,001 - 1,500</option>
+            <option value="a202_04">1,501 - 2,000</option>
+            <option value="a202_05">2,001 - 2,500</option>
+            <option value="a202_06">2,501 - 3,000</option>
+            <option value="a202_07">3,001 - 3,500</option>
+            <option value="a202_08">3,501 - 4,000</option>
+            <option value="a202_09">Greater than 4,000</option>
+          </select>
+
+          <br>
+
+          <label for="q203">Which best describes the foundation of your home?</label>
+          <select id="q203">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="a203_01">Unfinished half basement</option>
+            <option value="a203_02">Unfinished full basement</option>
+            <option value="a203_03">Finished half basement</option>
+            <option value="a203_04">Finished full basement</option>
+            <option value="a203_05">Crawlspace</option>
+            <option value="a203_06">Slab on grade</option>
+            <option value="a203_07">Skip/I don't know</option>
+          </select>
+
+          <br>
+
+          <label for="q204">Has your home had new attic insulation installed in the past 15 years?</label>
+          <select id="q204">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="a204_01">Yes, the entire attic</option>
+            <option value="a204_02">Yes, a portion of the attic</option>
+            <option value="a204_03">No</option>
+            <option value="a204_04">My residence does not have an attic to insulate</option>
+            <option value="a204_05">Skip/I don't know</option>
+          </select>
+
+          <br>
+
+          <label for="q205">Has your home had new wall insulation installed in the past 15 years?</label>
+          <select id="q205">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="a205_01">Yes, all exterior facing walls</option>
+            <option value="a205_02">Yes, some exterior facing walls</option>
+            <option value="a205_03">No</option>
+            <option value="a205_04">Skip/I don't know</option>
+          </select>
+
+          <br>
+
+          <label for="q206">Has your home had new floor insulation installed in the past 15 years?</label>
+          <select id="q206">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="a206_01">Yes, all floors above the crawlspace</option>
+            <option value="a206_02">Yes, some floors above the crawlspace</option>
+            <option value="a206_03">No</option>
+            <option value="a206_04">Skip/I don't know</option>
+          </select>
+
+          <br>
+
+          <label for="q207">Has your attic been converted to a living space?</label>
+          <select id="q207">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="a207_01">Yes, bedroom(s)</option>
+            <option value="a207_02">Yes, a home office</option>
+            <option value="a207_03">Yes, an entertainment area</option>
+            <option value="a207_04">No</option>
+            <option value="a207_05">My home does not have an attic</option>
+            <option value="a207_06">Skip/I don't know</option>
+          </select>
+
+          <br>
+
+          <label for="q208">Does your home have any sliding glass doors?</label>
+          <select id="q208">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="a208_01">Yes</option>
+            <option value="a208_02">No</option>
+            <option value="a208_03">Skip/I don't know</option>
+          </select>
+
+          <br>
+
+          <label for="q209">What is the primary frame material of your home's sliding glass door?</label>
+          <select id="q209">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="a209_01">Aluminum</option>
+            <option value="a209_02">Wood</option>
+            <option value="a209_03">Vinyl</option>
+            <option value="a209_04">Fiberglass</option>
+            <option value="a209_05">Composite</option>
+            <option value="a209_06">Skip/I don't know</option>
+          </select>
+
+          <br>
+
+          <label for="q210">How thick is the glass in your home's sliding glass door?</label>
+          <select id="q210">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="a210_01">Single pane</option>
+            <option value="a210_02">Double pane</option>
+            <option value="a210_03">Triple pane</option>
+            <option value="a210_04">Skip/I don't know</option>
+          </select>
+
+          <br>
+
+          <label for="q211">What is the primary frame material of your home's windows?</label>
+          <select id="q211">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="a211_01">Aluminum</option>
+            <option value="a211_02">Wood</option>
+            <option value="a211_03">Vinyl</option>
+            <option value="a211_04">Fiberglass</option>
+            <option value="a211_05">Composite</option>
+            <option value="a211_06">Skip/I don't know</option>
+          </select>
+
+          <br>
+
+          <label for="q212">How thick is the glass in your home's windows?</label>
+          <select id="q212">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="a212_01">Single pane</option>
+            <option value="a212_02">Double pane</option>
+            <option value="a212_03">Triple pane</option>
+            <option value="a212_04">Skip/I don't know</option>
+          </select>
+
+          <br>
+
+          <label for="q213">How long is your home exposed to direct sunlight?</label>
+          <select id="q213">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="a213_01">Direct sunlight in the morning</option>
+            <option value="a213_02">Direct sunlight in the afternoon</option>
+            <option value="a213_03">My home is shaded most of the day</option>
+            <option value="a213_04">Skip/I don't know</option>
+          </select>
+
+          <br>
+
+          <label for="q214">Do most of the windows in your home have blinds or coverings that effectively block unwanted sunlight?</label>
+          <select id="q214">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="a214_01">Yes, most or all of the window blinds/coverings in my home block unwanted sunlight when closed</option>
+            <option value="a214_02">Yes, the window blinds/covering in my home’s bedrooms block unwanted sunlight when closed, but not the rest of my home.</option>
+            <option value="a214_03">No, most or all of the window blinds/covers in my home do not block enough unwanted sunlight in when closed</option>
+            <option value="a214_04">No, most or all of the windows in my home have no blinds/covers</option>
+            <option value="a214_05">Skip/I don't know</option>
+          </select>
+
+          <br>
+
+          <label for="q215">Do you notice uneven temperatures in the rooms of your home?</label>
+          <select id="q215">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="a215_01">Yes</option>
+            <option value="a215_02">No</option>
+            <option value="a215_03">Skip/I don't know</option>
+          </select>
+
+          <br>
+
+          <label for="q216">Do you feel drafts or temperature differences in your home coming from any of the following?</label>
+          <select id="q216">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="a216_01">Exterior doors</option>
+            <option value="a216_02">Windows</option>
+            <option value="a216_03">Pet doors</option>
+            <option value="a216_04">Doors that lead to the basement</option>
+            <option value="a216_05">Doors that lead to the garage</option>
+            <option value="a216_06">Attic hatches</option>
+            <option value="a216_07">Built in shelves</option>
+            <option value="a216_08">Ventilation systems</option>
+            <option value="a216_09">Recessed lighting fixtures</option>
+            <option value="a216_10">Plumbing fixtures</option>
+            <option value="a216_11">Electrical outlets</option>
+            <option value="a216_12">Fireplaces/wood stoves</option>
+            <option value="a216_13">Window or wall air conditioner</option>
+            <option value="a216_14">Kitchen cabinet or soffit</option>
+            <option value="a216_15">I’m unable to tell</option>
+            <option value="a216_16">Skip/I don't know</option>
+          </select>
+
+          <br>
+
+          <label for="q217">Are you concerned or experiencing issues with any of the following?</label>
+          <select id="q217">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="q217_01">Interior air quality due to wildfire smoke/particulate matter infiltration</option>
+            <option value="q217_02">Interior air quality due to stagnant airflow</option>
+            <option value="q217_03">Lead presence in water</option>
+            <option value="q217_04">Lead presence in paint</option>
+            <option value="q217_05">Water intrusion during rain events</option>
+            <option value="q217_06">Plumbing leaks</option>
+            <option value="q217_07">Seismic integrity</option>
+            <option value="q217_08">Radon gas</option>
+            <option value="q217_09">Fire vulnerability</option>
+            <option value="q217_10">Noise</option>
+            <option value="q217_11">Losing power</option>
+            <option value="q217_12">Vermin</option>
+            <option value="q217_13">Skip/I don't know</option>
+          </select>
+
+          <br>
+       <h3>HVAC information</h3>
+          <label for="q301">What is your home's primary heating system?</label>
+          <select id="q301">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="q301_01">Electric furnace</option>
+            <option value="q301_02">Central heat pump</option>
+            <option value="q301_03">Ductless heat pump (mini split)</option>
+            <option value="q301_04">Electric zonal heat (baseboards, cadets, radiant, plug in heaters)</option>
+            <option value="q301_05">Geothermal heat pump</option>
+            <option value="q301_06">Natural gas furnace</option>
+            <option value="q301_07">Natural gas boiler</option>
+            <option value="q301_08">Natural gas fireplace</option>
+            <option value="q301_09">Oil furnace</option>
+            <option value="q301_10">Oil boiler</option>
+            <option value="q301_11">Propane furnace</option>
+            <option value="q301_12">Wood burning stove/fireplace</option>
+            <option value="q301_13">None</option>
+            <option value="q301_14">Other</option>
+            <option value="q301_15">Skip/I don't know</option>
+          </select>
+
+          <br>
+
+          <label for="q302">What is the approximate age of your home's primary heating system?</label>
+          <select id="q302">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="q302_01">0 - 5 years</option>
+            <option value="q302_02">5 - 10 years</option>
+            <option value="q302_03">10 - 15 years</option>
+            <option value="q302_04">15 - 20 years</option>
+            <option value="q302_05">20+ years</option>
+            <option value="q302_06">Skip/I don't know</option>
+          </select>
+
+          <br>
+
+          <label for="q303">//What is your home's secondary heating system?//</label>
+          <select id="q303">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="q303_01">Electric furnace</option>
+            <option value="q303_02">Central heat pump</option>
+            <option value="q303_03">Ductless heat pump (mini split)</option>
+            <option value="q303_04">Electric zonal heat (baseboards, cadets, radiant, plug in heaters)</option>
+            <option value="q303_05">Geothermal heat pump</option>
+            <option value="q303_06">Natural gas furnace</option>
+            <option value="q303_07">Natural gas boiler</option>
+            <option value="q303_08">Natural gas fireplace</option>
+            <option value="q303_09">Oil furnace</option>
+            <option value="q303_10">Oil boiler</option>
+            <option value="q303_11">Propane furnace</option>
+            <option value="q303_12">Wood burning stove/fireplace</option>
+            <option value="q303_13">None</option>
+            <option value="q303_14">Other</option>
+            <option value="q303_15">Skip/I don't know</option>
+          </select>
+
+          <br>
+
+          <label for="q304">//What is the approximate age of your home's secondary heating system?//</label>
+          <select id="q304">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="q304_01">0 - 5 years</option>
+            <option value="q304_02">5 - 10 years</option>
+            <option value="q304_03">10 - 15 years</option>
+            <option value="q304_04">15 - 20 years</option>
+            <option value="q304_05">20+ years</option>
+            <option value="q304_06">Skip/I don't know</option>
+          </select>
+
+          <br>
+
+          <label for="q305">What is your home's primary cooling system?</label>
+          <select id="q305">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="q305_01">None</option>
+            <option value="q305_02">Central air conditioner</option>
+            <option value="q305_03">Central heat pump</option>
+            <option value="q305_04">Ductless heat pump (mini split)</option>
+            <option value="q305_05">Geothermal heat pump</option>
+            <option value="q305_06">Window air conditioner(s)</option>
+            <option value="q305_07">Portable air conditioner(s)</option>
+            <option value="q305_08">Skip/I don't know</option>
+          </select>
+
+          <br>
+
+          <label for="q306">What is the approximate age of your home's primary cooling system?</label>
+          <select id="q306">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="q306_01">0 - 5 years</option>
+            <option value="q306_02">5 - 10 years</option>
+            <option value="q306_03">10 - 15 years</option>
+            <option value="q306_04">15 - 20 years</option>
+            <option value="q306_05">20+ years</option>
+            <option value="q306_06">Skip/I don't know</option>
+          </select>
+
+          <br>
+
+          <label for="q307">//What is your home's secondary cooling system?//</label>
+          <select id="q307">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="q307_01">None</option>
+            <option value="q307_02">Central air conditioner</option>
+            <option value="q307_03">Central heat pump</option>
+            <option value="q307_04">Ductless heat pump (mini split)</option>
+            <option value="q307_05">Geothermal heat pump</option>
+            <option value="q307_06">Window air conditioner(s)</option>
+            <option value="q307_07">Portable air conditioner(s)</option>
+            <option value="q307_08">Skip/I don't know</option>
+          </select>
+
+          <br>
+
+          <label for="q308">//What is the approximate age of your home's secondary cooling system?//</label>
+          <select id="q308">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="q308_01">0 - 5 years</option>
+            <option value="q308_02">5 - 10 years</option>
+            <option value="q308_03">10 - 15 years</option>
+            <option value="q308_04">15 - 20 years</option>
+            <option value="q308_05">20+ years</option>
+            <option value="q308_06">Skip/I don't know</option>
+          </select>
+
+          <br>
+
+          <label for="q309">What recent maintenance has been completed to your home's HVAC system?</label>
+          <select id="q309">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="q308_01">Significant repair in the past 3 years</option>
+            <option value="q308_02">Tune up in the past 3 years</option>
+            <option value="q308_03">No repairs/service needed in the past 3 years</option>
+            <option value="q308_04">Skip/I don't know</option>
+          </select>
+
+          <br>
+
+          <label for="q310">Does air flow come out evently at a consistent temperate across all your home's duct register?</label>
+          <select id="q310">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="q310_01">Yes</option>
+            <option value="q310_02">No, some registers have less flow than others</option>
+            <option value="q310_03">No, some registers are warmer/cooler than others</option>
+            <option value="q310_04">Skip/I don't know</option>
+          </select>
+
+          <br>
+
+          <label for="q311">Does your home's ductwork run within any of the following?</label>
+          <select id="q311">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="q311_01">Crawlspace</option>
+            <option value="q311_02">Attic</option>
+            <option value="q311_03">Walls</option>
+            <option value="q311_04">Floors</option>
+            <option value="q311_05">Skip/I don't know</option>
+          </select>
+
+          <br>
+
+          <label for="q312">Does your home's ductwork run within any of the following?</label>
+          <select id="q312">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="q312_01">Smart/Wi-Fi connected</option>
+            <option value="q312_02">Programmable</option>
+            <option value="q312_03">Manual</option>
+            <option value="q312_04">Remote control</option>
+            <option value="q312_05">My home does not have a thermostat</option>
+            <option value="q312_06">Skip/I don't know</option>
+          </select>
+
+          <br>
+
+          <label for="q313">What is the brand of the thermostat that controls your home's primary HVAC system?</label>
+          <select id="q313">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="q313_01">Google Nest</option>
+            <option value="q313_02">ecobee</option>
+            <option value="q313_03">Honeywell</option>
+            <option value="q313_04">Carrier/Bryant</option>
+            <option value="q313_05">American Standard/Trane</option>
+            <option value="q313_06">Lennox</option>
+            <option value="q313_07">Rheem/Ruud</option>
+            <option value="q313_08">Emerson</option>
+            <option value="q313_09">York</option>
+            <option value="q313_10">Other</option>
+            <option value="q313_11">Skip/I don't know</option>
+          </select>
+
+          <br>
+
+          <label for="q314">Are you interested in solar for your home?</label>
+          <select id="q314">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="q314_01">Yes, I am interested in solar for my home</option>
+            <option value="q314_02">Yes, I am interested in improving or expanding my home's current solar system</option>
+            <option value="q314_03">No, I am happy with my current solar system</option>
+            <option value="q314_04">No</option>
+            <option value="q314_05">Skip/I don't know</option>
+          </select>
+       <h3>Appliances</h3>
+          <br>
+          <label for="q401">What is your home's primary water heating system?</label>
+          <select id="q401">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="q401_01">Electric tank</option>
+            <option value="q401_02">Electric hybrid tank (heat pump)</option>
+            <option value="q401_03">Natural gas tank</option>
+            <option value="q401_04">Natural gas tankless</option>
+            <option value="q401_05">Oil</option>
+            <option value="q401_06">Propane</option>
+            <option value="q401_07">Skip/I don't know</option>
+          </select>
+
+          <br>
+
+          <label for="q402">Where is your home's water heater located?</label>
+          <select id="q402">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="q402_01">Garage</option>
+            <option value="q402_02">Basement</option>
+            <option value="q402_03">Utility room</option>
+            <option value="q402_04">Closet</option>
+            <option value="q402_05">Crawlspace</option>
+            <option value="q402_06">Skip/I don't know</option>
+          </select>
+
+          <br>
+          <label for="q403">What type of stove do you use in your home?</label>
+          <select id="q403">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="q403_01">Electric stove (coil or ceramic)</option>
+            <option value="q403_02">Electric stove (induction)</option>
+            <option value="q403_03">Natural gas stove</option>
+            <option value="q403_04">Propane stove</option>
+            <option value="q403_05">Wood burning stove</option>
+            <option value="q403_06">Skip/I don't know</option>
+          </select>
+
+          <br>
+
+          <label for="q404">What is the approximate age of the stove in your home?</label>
+          <select id="q404">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="q404_01">0 - 5 years</option>
+            <option value="q404_02">5 - 10 years</option>
+            <option value="q404_03">10 - 15 years</option>
+            <option value="q404_04">15 - 20 years</option>
+            <option value="q404_05">20+ years</option>
+            <option value="q404_06">Skip/I don't know</option>
+          </select>
+
+          <br>
+
+          <label for="q405">What type of clothes washer and dryer do you use in your home?</label>
+          <select id="q405">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="q405_01">Washer: Top loading</option>
+            <option value="q405_02">Washer: Front loading</option>
+            <option value="q405_03">Dryer: Top loading</option>
+            <option value="q405_04">Dryer: Front loading</option>
+            <option value="q405_05">I don’t' have a washer</option>
+            <option value="q405_05">I don’t' have a dryer</option>
+            <option value="q405_06">Skip/I don't know</option>
+          </select>
+
+          <br>
+
+          <label for="q406">What is the approximate age of the clothes washer and dryer in your home?</label>
+          <select id="q406">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="q406_01">0 - 5 years</option>
+            <option value="q406_02">5 - 10 years</option>
+            <option value="q406_03">10 - 15 years</option>
+            <option value="q406_04">15 - 20 years</option>
+            <option value="q406_05">20+ years</option>
+            <option value="q406_06">Skip/I don't know</option>
+          </select>
+
+          <br>
+
+          <label for="q407">What is the approximate age of your primary refrigerator?</label>
+          <select id="q407">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="q407_01">0 - 5 years</option>
+            <option value="q407_02">5 - 10 years</option>
+            <option value="q407_03">10 - 15 years</option>
+            <option value="q407_04">15 - 20 years</option>
+            <option value="q407_05">20+ years</option>
+            <option value="q407_06">Skip/I don't know</option>
+          </select>
+
+          <br>
+
+          <label for="q408">How many of the lightbulbs in your home are LEDs?</label>
+          <select id="q408">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="q408_01">All</option>
+            <option value="q408_02">Most</option>
+            <option value="q408_03">About half</option>
+            <option value="q408_04">Less than half</option>
+            <option value="q408_05">Very few/none</option>
+            <option value="q408_06">Skip/I don't know</option>
+          </select>
+
+          <br>
+
+          <label for="q409">How many of your home's bathrooms have showerheads?</label>
+          <select id="q409">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="q409_01">1</option>
+            <option value="q409_02">2</option>
+            <option value="q409_03">3</option>
+            <option value="q409_04">3+</option>
+            <option value="q409_05">Skip/I don't know</option>
+          </select>
+
+          <br>
+
+          <label for="q410">What type of showerheads are most frequently used in your home?</label>
+          <select id="q410">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="q410_01">Low flow/high performance</option>
+            <option value="q410_02">Non-low flow</option>
+            <option value="q410_03">Skip/I don't know</option>
+          </select>
+
+          <br>
+
+          <label for="q411">What best describes your home's electrical service?</label>
+          <select id="q411">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="q411_01">Grounded electric wiring</option>
+            <option value="q411_02">Non-grounded electric wiring</option>
+            <option value="q411_03">Non-grounded electric wiring with GFCI outlets</option>
+            <option value="q411_04">Knob and tube wiring</option>
+            <option value="q411_05">Skip/I don't know</option>
+          </select>
+
+          <br>
+
+          <label for="q412">What best describes your home's electrical panel?</label>
+          <select id="q412">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="q412_01">Good condition with no unoccupied breakers</option>
+            <option value="q412_02">Bad condition with no unoccupied breakers</option>
+            <option value="q412_03">Good condition with unoccupied breakers</option>
+            <option value="q412_04">Bad condition with unoccupied breakers</option>
+            <option value="q412_05">Skip/I don't know</option>
+          </select>
+
+          <br>
+
+         <button type="submit" input type ="button" class="btn btn-default">Show me results</button>
+          </div>
+         </form>
+<! Recommendations begin below >
+     <div class="row">
+      <div class="col-sm-6 second-column">
+        <ul>
+          <p>Information about this customer:</p>
+          <li>dj</li>
+        </ul>
+      </div>
+      <div class="col-sm-6 second-column">
+        <ul>
+        <p>Recommendations (1:1):</p>
+<! Utility Recommendations>
+        <div id="pgewebsite">
+          <li>Visit <a href="https://portlandgeneral.com/">Portland General Electric</a> for more energy efficiency tips.</li>
+        </div>
+        <div id="pacwebsite">
+          <li>Visit <a href="https://portlandgeneral.com/">Pacific Power</a> for more energy efficiency tips.</li>
+        </div>
+        <div id="nwnwebsite">
+          <li>Visit <a href="https://portlandgeneral.com/">NW Natural</a> for more energy efficiency tips.</li>
+        </div>
+        <div id="cngwebsite">
+          <li>Visit <a href="https://portlandgeneral.com/">Cascade Natural Gas</a> for more energy efficiency tips.</li>
+        </div>
+        <div id="aviwebsite">
+          <li>Visit <a href="https://portlandgeneral.com/">Avista</a> for more energy efficiency tips.</li>
+        </div>
+      <div id="dei">
+        <li>You may qualify for DEI things.</li>
+      </div>
+<! DEI Recommendations>
+        <div id="insulation">
+          <li>Insulation is one of the most cost-effective ways to prepare your home for any weather and season. Homes built before 1978 typically have about 75% less insulation than homes built to today's standards. The better the insulation, the less your heating and cooling system has to work to maintain comfortable temperatures. Consider evaluating the amount and condition of your home’s insulation.</li>
+        </div>
+        <div id="insulation2">
+          <li>Insulation is one of the most cost-effective ways to prepare your home for any weather and season. Homes built before 2008 typically have less insulation than homes built to today’s standards. The better the insulation, the less your heating and cooling system has to work to maintain comfortable temperatures. Consider evaluating the condition of your home’s insulation.</li>
+        </div>
+        <div id="insulationdiy">
+          <li>For tips on how to evaluate and install insulation in your home to improve energy efficiency, click here.</li>
+        </div>
+        <div id="insulationnondiy">
+          <li>Contact a local contractor to help determine how improved insulation can benefit the efficiency of your home.</li>
+        </div>
+        <div id="SWR">
+          <li>Customer is annual household income and full time resident is met.</li>
+        </div>
+        <div id="diyyes">
+          <li>This customer has an interest in DIY and should be contacted with relevant offers</li>
+      </div>
+      <div id="diyno">
+        <li>This customer prefers hiring professionals and will be less interested in DIY information</li>
+      </div>
+        <p>What we've learned about this customer:</p>
+  </ul>
+</html>
