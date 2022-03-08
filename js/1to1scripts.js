@@ -54,17 +54,16 @@ $(document).ready(function() {
   var pgetest = 0;
   var pactest = 0;
   var nwntest = 0;
-  var hide_insulation_windows = 0;
   var hide_sliding_glass = 0;
   var ductwork = 0;
 
-/*Variables that interact with other variables */
-
+/*Big variables - Bucket customers on a larger scale. All 2009 homes will have all relevant insulation/window questions removed. */
+  var hide_insulation_windows = 0;
 /*Variables that do their own thing and have no impact on other variables */
 
 /*HTML to display if multiple parameters are met */
 
-/*HTML to display if single parameter is met */
+/*Hide if question is not answered */
 
 /*Customer interest category score*/
 if (q101 === "a101_01") {
@@ -106,42 +105,71 @@ if (nwntest == 1 ){
 
 /* DIY score */
   if (q105 === "a105_01") {
+  diy = 2;
+  }
+  if (q105 === "a105_02" || q105 === "a105_03") {
   diy = 1;
   }
 
   if (q105 === "a105_04") {
-  diy = -1 ;
+  diy = 0 ;
   }
 
-  if (diy == 1 ) {
+  if (q105 === null) {
+    diy = null;
+  }
+
+/* Hides all DIY suggestions if the user says they prefer professionals. */
+
+  if (diy == 2 ) {
   $("#diyyes").show();
   $("#diyno").hide();
   $("#diymaybe").hide();
-  }
-
-  if (diy == -1 ) {
-  $("#diyyes").hide();
-  $("#diyno").show();
-  $("#diymaybe").hide();
+  $("#alldiy").show();
+  $("#professional_tips").hide();
   }
 
   if (diy == 0 ) {
   $("#diyyes").hide();
+  $("#diyno").show();
+  $("#diymaybe").hide();
+  $("#alldiy").hide();
+  $("#professional_tips").show();
+  }
+
+  if (diy == 1 ) {
+  $("#diyyes").hide();
   $("#diyno").hide();
   $("#diymaybe").show();
+  $("#alldiy").show();
+  $("#professional_tips").hide();
+  }
+
+  if (diy == null ) {
+  $("#diyyes").hide();
+  $("#diyno").hide();
+  $("#diymaybe").hide();
+  $("#alldiy").hide();
+  $("#professional_tips").hide();
   }
 
 /* Year built score. Homes built after 2008 will have a score of 0 and the insulation and window questions are removed. */
+
    if (q201 === "a201_01" || q201 === "a201_02" || q201 === "a201_04") {
      hide_insulation_windows = 1;
+   } else {
+     hide_insulation_windows = 0;
    }
 
    if (hide_insulation_windows > 0) {
      $("#insulation_questions").show();
      $("#windows_questions").show();
-   } else{
+   } else {
      $("#insulation_questions").hide();
      $("#windows_questions").hide();
+     $("#insulation").hide();
+     $("#diy_insulation").hide();
+     $("#pro_insulation").hide();
    }
 /* Windows recommendation display. Only for homes that are older than 2008 and have not re-insulated attic/wall/floor within the past 15 years.*/
 
@@ -161,14 +189,31 @@ if (q204 !== "a204_01" || q205 !== "a205_01" || q206 !== "a206_01") {
   insulation = 1;
 }
 
-if (insulation > 0 ) {
-  $('#insulation').show();
+  if (insulation > 0 && hide_insulation_windows > 0 && q204 != null && q205 != null && q206 != null) {
+    $('#insulation').show();
+  } else {
+    $('#insulation').hide();
+  }
+
+if (insulation > 0 && q201 === "a201_01") {
+  $("#insulation_pre_1978").show();
+
 } else {
-  $('#insulation').hide();
+  $("#insulation_pre_1978").hide();
 }
 
-if (hide_insulation_windows == 0) {
-  $('#insulation').hide();
+if (insulation > 0 && q201 === "a201_02") {
+  $("#insulation_post_1978").show();
+} else {
+  $("#insulation_post_1978").hide();
+}
+
+if (insulation > 0 && hide_insulation_windows > 0) {
+  $("#diy_insulation").show();
+  $("#pro_insulation").show();
+} else {
+  $("#diy_insulation").hide();
+  $("#pro_insulation").hide();
 }
 
 /* HVAC duct questions. Will not be asked if user indciated they have a DHP, zonal heat, fireplace, none.*/
@@ -182,12 +227,18 @@ if (ductwork > 0 ) {
   $('#duct_question').show();
 }
 
-    console.log("this is insulation windows:", (hide_insulation_windows));
-    console.log("this is hide sliding glass:", (hide_sliding_glass));
-    console.log("ductwork", (ductwork));
-    console.log("this is var 204:", (q204));
-    console.log("this is var 205:", (q205));
-    console.log("this is var 206:", (q206));
+/* Final display check for insulation recommendations.*/
+if (q204 == null && q205 == null && q206 == null) {
+  $('#insulation').hide();
+  $('#alldiy').hide();
+  $('#professional_tips').hide();
+}
+    console.log("insulation:", (insulation));
+    console.log("diy:", (diy));
+    console.log("year", (q201));
+    console.log("hide insulation windows:", (hide_insulation_windows));
+    console.log("this is var q204:", (q204));
+    console.log("this is var q211 null?:", (q206));
     event.preventDefault();
    });
   });

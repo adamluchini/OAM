@@ -23,6 +23,8 @@ abbr {
   padding-left: 20px
 }
 
-#pgewebsite, #pacwebsite, #nwnwebsite, #cngwebsite, #aviwebsite, #SWR, #dei, #diyyes, #diyno, #diymaybe, #insulation_pre_1978, #insulation_post_1978, #insulation_diy, #insulation_non_diy, #pgetest, #pactest, #nwntest, #insulation, #windows, #insulation_questions, #windows_questions, #sliding_glass_questions, #duct_question {
+/*# is for HTML elements that are hidden from view and an action in JavaScript will display them. */
+
+#pgewebsite, #pacwebsite, #nwnwebsite, #cngwebsite, #aviwebsite, #dei, #diyyes, #diyno, #diymaybe, #insulation_pre_1978, #insulation_post_1978, #insulation_diy, #insulation_non_diy, #pgetest, #pactest, #nwntest, #insulation, #windows, #alldiy, #professional_tips {
   display: none;
 }

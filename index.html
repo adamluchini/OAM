@@ -5,8 +5,7 @@
     <link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css"></link>
     <link href="css/styles.css" rel="stylesheet" type="text/css"></link>
     <script src="js/jquery-1.12.4.js"></script>
-    <script src="js/1to1scripts.js"></script>
-    <!<script src="js/manyto1scripts.js"></script>
+    <script src="js/question_display.js"></script>
     <title>Online Energy Assessment Demo</title>
   </head>
      <div class="container">
@@ -179,7 +178,20 @@
 
           <br>
 
-          <div id = "insulation_questions">
+          <label for="q207">Has your attic been converted to a living space?</label>
+          <select id="q207">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="a207_01">Yes, bedroom(s)</option>
+            <option value="a207_02">Yes, a home office</option>
+            <option value="a207_03">Yes, an entertainment area</option>
+            <option value="a207_04">No</option>
+            <option value="a207_05">My home does not have an attic</option>
+            <option value="a207_06">Skip/I don't know</option>
+          </select>
+          <br>
+
+          <div id = "insulation_windows_questions">
+            <div id = "attic_question">
           <label for="q204">Has your home had new attic insulation installed in the past 15 years?</label>
           <select id="q204">
             <option selected disabled hidden style='display: none' value=''></option>
@@ -189,7 +201,7 @@
             <option value="a204_04">My residence does not have an attic to insulate</option>
             <option value="a204_05">Skip/I don't know</option>
           </select>
-
+          </div>
           <br>
 
           <label for="q205">Has your home had new wall insulation installed in the past 15 years?</label>
@@ -211,21 +223,7 @@
             <option value="a206_03">No</option>
             <option value="a206_04">Skip/I don't know</option>
           </select>
-
           <br>
-
-          <label for="q207">Has your attic been converted to a living space?</label>
-          <select id="q207">
-            <option selected disabled hidden style='display: none' value=''></option>
-            <option value="a207_01">Yes, bedroom(s)</option>
-            <option value="a207_02">Yes, a home office</option>
-            <option value="a207_03">Yes, an entertainment area</option>
-            <option value="a207_04">No</option>
-            <option value="a207_05">My home does not have an attic</option>
-            <option value="a207_06">Skip/I don't know</option>
-          </select>
-
-          </div>
 
           <br>
           <div id = "windows_questions">
@@ -286,7 +284,7 @@
           </select>
           </div>
           <br>
-
+</div>
           <label for="q213">How long is your home exposed to direct sunlight?</label>
           <select id="q213">
             <option selected disabled hidden style='display: none' value=''></option>
@@ -384,7 +382,7 @@
           </select>
          <button type="submit" input type ="button" class="btn btn-default">Submit HVAC info</button>
           <br>
-
+          <div id = "all_heating_questions">
           <label for="q302">What is the approximate age of your home's primary heating system?</label>
           <select id="q302">
             <option selected disabled hidden style='display: none' value=''></option>
@@ -397,29 +395,28 @@
           </select>
 
           <br>
-
-          <label for="q303">//What is your home's secondary heating system?//</label>
+          <label for="q303">What is your home's secondary heating system?</label>
           <select id="q303">
             <option selected disabled hidden style='display: none' value=''></option>
-            <option value="q303_01">Electric furnace</option>
-            <option value="q303_02">Central heat pump</option>
-            <option value="q303_03">Ductless heat pump (mini split)</option>
-            <option value="q303_04">Electric zonal heat (baseboards, cadets, radiant, plug in heaters)</option>
-            <option value="q303_05">Geothermal heat pump</option>
-            <option value="q303_06">Natural gas furnace</option>
-            <option value="q303_07">Natural gas boiler</option>
-            <option value="q303_08">Natural gas fireplace</option>
-            <option value="q303_09">Oil furnace</option>
-            <option value="q303_10">Oil boiler</option>
-            <option value="q303_11">Propane furnace</option>
-            <option value="q303_12">Wood burning stove/fireplace</option>
-            <option value="q303_13">None</option>
-            <option value="q303_14">Other</option>
-            <option value="q303_15">Skip/I don't know</option>
+            <option value="a303_01">Electric furnace</option>
+            <option value="a303_02">Central heat pump</option>
+            <option value="a303_03">Ductless heat pump (mini split)</option>
+            <option value="a303_04">Electric zonal heat (baseboards, cadets, radiant, plug in heaters)</option>
+            <option value="a303_05">Geothermal heat pump</option>
+            <option value="a303_06">Natural gas furnace</option>
+            <option value="a303_07">Natural gas boiler</option>
+            <option value="a303_08">Natural gas fireplace</option>
+            <option value="a303_09">Oil furnace</option>
+            <option value="a303_10">Oil boiler</option>
+            <option value="a303_11">Propane furnace</option>
+            <option value="a303_12">Wood burning stove/fireplace</option>
+            <option value="a303_13">None</option>
+            <option value="a303_14">Other</option>
+            <option value="a303_15">Skip/I don't know</option>
           </select>
 
           <br>
-
+          <div id = "secondary_heating_question">
           <label for="q304">//What is the approximate age of your home's secondary heating system?//</label>
           <select id="q304">
             <option selected disabled hidden style='display: none' value=''></option>
@@ -430,24 +427,25 @@
             <option value="q304_05">20+ years</option>
             <option value="q304_06">Skip/I don't know</option>
           </select>
+          </div>
 
           <br>
-
+        </div>
           <label for="q305">What is your home's primary cooling system?</label>
           <select id="q305">
             <option selected disabled hidden style='display: none' value=''></option>
-            <option value="q305_01">None</option>
-            <option value="q305_02">Central air conditioner</option>
-            <option value="q305_03">Central heat pump</option>
-            <option value="q305_04">Ductless heat pump (mini split)</option>
-            <option value="q305_05">Geothermal heat pump</option>
-            <option value="q305_06">Window air conditioner(s)</option>
-            <option value="q305_07">Portable air conditioner(s)</option>
-            <option value="q305_08">Skip/I don't know</option>
+            <option value="a305_01">None</option>
+            <option value="a305_02">Central air conditioner</option>
+            <option value="a305_03">Central heat pump</option>
+            <option value="a305_04">Ductless heat pump (mini split)</option>
+            <option value="a305_05">Geothermal heat pump</option>
+            <option value="a305_06">Window air conditioner(s)</option>
+            <option value="a305_07">Portable air conditioner(s)</option>
+            <option value="a305_08">Skip/I don't know</option>
           </select>
 
           <br>
-
+          <div id = "primary_cooling_question">
           <label for="q306">What is the approximate age of your home's primary cooling system?</label>
           <select id="q306">
             <option selected disabled hidden style='display: none' value=''></option>
@@ -464,18 +462,18 @@
           <label for="q307">//What is your home's secondary cooling system?//</label>
           <select id="q307">
             <option selected disabled hidden style='display: none' value=''></option>
-            <option value="q307_01">None</option>
-            <option value="q307_02">Central air conditioner</option>
-            <option value="q307_03">Central heat pump</option>
-            <option value="q307_04">Ductless heat pump (mini split)</option>
-            <option value="q307_05">Geothermal heat pump</option>
-            <option value="q307_06">Window air conditioner(s)</option>
-            <option value="q307_07">Portable air conditioner(s)</option>
-            <option value="q307_08">Skip/I don't know</option>
+            <option value="a307_01">None</option>
+            <option value="a307_02">Central air conditioner</option>
+            <option value="a307_03">Central heat pump</option>
+            <option value="a307_04">Ductless heat pump (mini split)</option>
+            <option value="a307_05">Geothermal heat pump</option>
+            <option value="a307_06">Window air conditioner(s)</option>
+            <option value="a307_07">Portable air conditioner(s)</option>
+            <option value="a307_08">Skip/I don't know</option>
           </select>
 
           <br>
-
+          <div id = "secondary_cooling_question">
           <label for="q308">//What is the approximate age of your home's secondary cooling system?//</label>
           <select id="q308">
             <option selected disabled hidden style='display: none' value=''></option>
@@ -486,9 +484,9 @@
             <option value="q308_05">20+ years</option>
             <option value="q308_06">Skip/I don't know</option>
           </select>
-
+          </div>
           <br>
-
+        </div>
           <label for="q309">What recent maintenance has been completed to your home's HVAC system?</label>
           <select id="q309">
             <option selected disabled hidden style='display: none' value=''></option>
@@ -500,7 +498,7 @@
 
           <br>
 
-          <div id = "duct_question">
+          <div id = "duct_questions">
           <label for="q310">Does air flow come out evently at a consistent temperate across all your home's duct register?</label>
           <select id="q310">
             <option selected disabled hidden style='display: none' value=''></option>
@@ -523,6 +521,7 @@
           </select>
           <br>
           </div>
+          <div id = "thermostat_questions">
           <label for="q312">What type of thermostat</label>
           <select id="q312">
             <option selected disabled hidden style='display: none' value=''></option>
@@ -553,7 +552,7 @@
           </select>
 
           <br>
-
+          </div>
           <label for="q314">Are you interested in solar for your home?</label>
           <select id="q314">
             <option selected disabled hidden style='display: none' value=''></option>
@@ -768,14 +767,8 @@
         <div id="insulation_post_1978">
           <li>Insulation is one of the most cost-effective ways to prepare your home for any weather and season. Homes built before 2008 typically have less insulation than homes built to today’s standards. The better the insulation, the less your heating and cooling system has to work to maintain comfortable temperatures. Consider evaluating the condition of your home’s insulation.</li>
         </div>
-        <div id="insulation_diy">
-          <li>For tips on how to evaluate and install insulation in your home to improve energy efficiency, click here.</li>
-        </div>
-        <div id="insulation_non_diy">
-          <li>Contact a local contractor to help determine how improved insulation can benefit the efficiency of your home.</li>
-        </div>
       </div>
-<!Windows>
+<!--windows>
       <div id="windows">
         <h4>Windows:</h4>
         <div id="windows_pre_1978">
@@ -791,6 +784,20 @@
         <li>Contact a local contractor to help determine how improved insulation can benefit the efficiency of your home.</li>
       </div>
     </div>
+  -->
+<!DIY Recommendations>
+  <div id = "alldiy">
+    <h3>DIY Tips:</h3>
+    <div id="diy_insulation">
+      <li>For tips on how to evaluate and install insulation in your home to improve energy efficiency, click here.</li>
+    </div>
+  </div>
+  <div id = "professional_tips">
+    <h3>Help from a professional:</h3>
+    <div id="pro_insulation">
+      <li>Contact a professional contractor to evaluate your home's insulation.</li>
+    </div>
+  </div>
 <! Stored information to clue in future marketing efforts/market trends>
         <p>From this assessment, Energy Trust has learned the following about this customer:</p>
         <div id="SWR">
