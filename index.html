@@ -6,6 +6,7 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css"></link>
     <script src="js/jquery-1.12.4.js"></script>
     <script src="js/question_display.js"></script>
+    <script src="js/recommendation_display.js"></script>
     <title>Online Energy Assessment Demo</title>
   </head>
      <div class="container">
@@ -22,7 +23,18 @@
              <option value="a101_02">//How to improve my home's comfort//</option>
              <option value="a101_03">How to improve my home's health and safety</option>
            </select>
+           <div>
+           <fieldset>
+           <label for="q101test"><abbr title="Words">What are you interested in learning?</abbr></label>
+               <input type='checkbox' name ='q101test' value ='a101_01' >
+               <label for ="a101_01">EE</label>
+               <input type='checkbox' name ='q101test' value ='a101_02' >
+               <label for ="a101_02">Comfort</label>
+            <input type="submit" value="Submit now" />
 
+               <br>
+           </fieldset>
+         </div>
            <br>
 
            <label for="q102">In what type of home do you live?</label>
@@ -145,7 +157,7 @@
             <option value ="a201_03">After 2009</option>
             <option value="a201_04">Skip/I don't know</option>
           </select>
-          <button type="submit" input type ="button" class="btn btn-default"  option value = "a201_01">Submit year built</button>
+          <!--<button type="submit" input type ="button" class="btn btn-default"  option value = "a201_01">Submit year built</button>-->
           <br>
 
           <label for="q202">What is the approximate square footage of your home?</label>
@@ -178,20 +190,7 @@
 
           <br>
 
-          <label for="q207">Has your attic been converted to a living space?</label>
-          <select id="q207">
-            <option selected disabled hidden style='display: none' value=''></option>
-            <option value="a207_01">Yes, bedroom(s)</option>
-            <option value="a207_02">Yes, a home office</option>
-            <option value="a207_03">Yes, an entertainment area</option>
-            <option value="a207_04">No</option>
-            <option value="a207_05">My home does not have an attic</option>
-            <option value="a207_06">Skip/I don't know</option>
-          </select>
-          <br>
-
           <div id = "insulation_windows_questions">
-            <div id = "attic_question">
           <label for="q204">Has your home had new attic insulation installed in the past 15 years?</label>
           <select id="q204">
             <option selected disabled hidden style='display: none' value=''></option>
@@ -201,7 +200,6 @@
             <option value="a204_04">My residence does not have an attic to insulate</option>
             <option value="a204_05">Skip/I don't know</option>
           </select>
-          </div>
           <br>
 
           <label for="q205">Has your home had new wall insulation installed in the past 15 years?</label>
@@ -225,6 +223,19 @@
           </select>
           <br>
 
+          <div id = "attic_question">
+          <label for="q207">Has your attic been converted to a living space?</label>
+          <select id="q207">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="a207_01">Yes, bedroom(s)</option>
+            <option value="a207_02">Yes, a home office</option>
+            <option value="a207_03">Yes, an entertainment area</option>
+            <option value="a207_04">No</option>
+            <option value="a207_05">My home does not have an attic</option>
+            <option value="a207_06">Skip/I don't know</option>
+          </select>
+          <br>
+          </div>
           <br>
           <div id = "windows_questions">
           <label for="q208">Does your home have any sliding glass doors?</label>
@@ -234,7 +245,7 @@
             <option value="a208_02">No</option>
             <option value="a208_03">Skip/I don't know</option>
           </select>
-          <button type="submit" input type ="button" class="btn btn-default"  option value = "a201_01">Submit sliding glass door</button>
+
           <br>
           <div id = "sliding_glass_questions">
           <label for="q209">What is the primary frame material of your home's sliding glass door?</label>
@@ -380,9 +391,9 @@
             <option value="a301_14">Other</option>
             <option value="a301_15">Skip/I don't know</option>
           </select>
-         <button type="submit" input type ="button" class="btn btn-default">Submit HVAC info</button>
+         <!--<button type="submit" input type ="button" class="btn btn-default">Submit HVAC info</button> -->
           <br>
-          <div id = "all_heating_questions">
+          <div id = "all_heating_questions1">
           <label for="q302">What is the approximate age of your home's primary heating system?</label>
           <select id="q302">
             <option selected disabled hidden style='display: none' value=''></option>
@@ -445,6 +456,7 @@
           </select>
 
           <br>
+          <div id = "all_cooling_questions" </div>
           <div id = "primary_cooling_question">
           <label for="q306">What is the approximate age of your home's primary cooling system?</label>
           <select id="q306">
@@ -459,7 +471,7 @@
 
           <br>
 
-          <label for="q307">//What is your home's secondary cooling system?//</label>
+          <label for="q307">What is your home's secondary cooling system?</label>
           <select id="q307">
             <option selected disabled hidden style='display: none' value=''></option>
             <option value="a307_01">None</option>
@@ -487,6 +499,7 @@
           </div>
           <br>
         </div>
+        </div>
           <label for="q309">What recent maintenance has been completed to your home's HVAC system?</label>
           <select id="q309">
             <option selected disabled hidden style='display: none' value=''></option>
@@ -497,7 +510,7 @@
           </select>
 
           <br>
-
+          <div id = "all_heating_questions2">
           <div id = "duct_questions">
           <label for="q310">Does air flow come out evently at a consistent temperate across all your home's duct register?</label>
           <select id="q310">
@@ -521,6 +534,8 @@
           </select>
           <br>
           </div>
+          </div>
+
           <div id = "thermostat_questions">
           <label for="q312">What type of thermostat</label>
           <select id="q312">
