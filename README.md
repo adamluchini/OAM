@@ -1,12 +1,12 @@
 # _Adam Luchini_
 
-#### _Vacation Destination Suggester, June 3rd, 2016_
+#### Online Energy Assessment_
 
 #### By _**Adam Luchini**_
 
 ## Description
 
-_A website that suggests a vacation destination based off answers the user gives for 5 questions_
+_An online survey that suggests energy improvements for a persons's home.
 
 ## Technologies Used
 
