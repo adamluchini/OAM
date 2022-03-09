@@ -16,22 +16,18 @@
     <div class="col-sm-6 first-column">
       <form id="questions">
        <h3>About you section</h3>
-           <label for="q101"><abbr title="Words">What are you interested in learning?</abbr></label>
-           <select id="q101">
-             <option selected disabled hidden style='display: none' value=''></option>
-             <option value="a101_01" abbr title= "it will help">How to improve my home's energy efficiency</abbr></option>
-             <option value="a101_02">//How to improve my home's comfort//</option>
-             <option value="a101_03">How to improve my home's health and safety</option>
-           </select>
            <div>
            <fieldset>
-           <label for="q101test"><abbr title="Words">What are you interested in learning?</abbr></label>
-               <input type='checkbox' name ='q101test' value ='a101_01' >
-               <label for ="a101_01">EE</label>
-               <input type='checkbox' name ='q101test' value ='a101_02' >
-               <label for ="a101_02">Comfort</label>
-            <input type="submit" value="Submit now" />
-
+           <label for="q101"><abbr title="Words">What are you interested in learning?</abbr></label>
+               <br>
+               <input type='checkbox' name ='q101' value ='a101_01' >
+               <label for ="a101_01">How to improve my home's energy efficiency</label>
+               <br>
+               <input type='checkbox' name ='q101' value ='a101_02' >
+               <label for ="a101_02">How to improve my home's comfort</label>
+                <br>
+               <input type='checkbox' name ='q101' value ='a101_03' >
+               <label for ="a101_03">How to improve my home's health and safety</label>
                <br>
            </fieldset>
          </div>
@@ -124,30 +120,47 @@
             <option value="a108_09">8+</option>
             <option value="a108_10">Skip/I prefer not to answer</option>
           </select>
-
           <br>
-
+            <div>
+            <fieldset>
           <label for="q109"><abbr title="Energy Trust is asking customers to submit demographic information because it is our responsibility to ensure that all customers can directly benefit from our services. We believe demographic data collection is a simple yet powerful tool for pursuing equity and inclusion in our work and programs. We will use that information to assess our offers and identify barriers to participation, enabling us to develop and improve offers to reduce or eliminate those barriers. Providing this information is optional, does not impact your participation in the program, and will be held confidential by Energy Trust."> Which categories best describe the race, ethnicity or origin of the residents in your home?</label>
-          <select id="q109">
-            <option selected disabled hidden style='display: none' value=''></option>
-            <option value="a109_01">Black or African American</option>
-            <option value="a109_02">Chinese</option>
-            <option value="a109_03">Filipino</option>
-            <option value="a109_04">Hispanic, Latino or Spanish</option>
-            <option value="a109_05">Japanese</option>
-            <option value="a109_06">Korean</option>
-            <option value="a109_07">Middle Eastern or North African</option>
-            <option value="a109_08">Native American or Alaska Native</option>
-            <option value="a109_09">Native Hawaiian or Other Pacific Islander</option>
-            <option value="a109_10">South Asian or Indian</option>
-            <option value="a109_11">Vietnamese</option>
-            <option value="a109_12">Other Asian Origin</option>
-            <option value="a109_13">White, Caucasian, or European</option>
-            <option value="a109_14">Other race, ethinicity, or origin</option>
-            <option value="a109_15">Skip/I prefer not to answer</option>
-          </select>
-
-          <br>
+            <br>
+            <input type='checkbox' name ='q109' value ='a109_01' >
+            <label for ="a109_01">Black or African American</label>
+            <input type='checkbox' name ='q109' value ='a109_02' >
+            <label for ="a109_02">Chinese</label>
+            <input type='checkbox' name ='q109' value ='a109_03' >
+            <label for ="a109_03">Filipino</label>
+            <input type='checkbox' name ='q109' value ='a109_04' >
+            <label for ="a109_04">Hispanic, Latino or Spanish</label>
+            <input type='checkbox' name ='q109' value ='a109_05' >
+            <label for ="a109_05">Japanese</label>
+             <br>
+            <input type='checkbox' name ='q109' value ='a109_06' >
+            <label for ="a109_06">Korean</label>
+            <input type='checkbox' name ='q109' value ='a109_07' >
+            <label for ="a109_07">Middle Eastern or North African</label>
+            <input type='checkbox' name ='q109' value ='a109_08' >
+            <label for ="a109_08">Native American or Alaska Native</label>
+            <input type='checkbox' name ='q109' value ='a109_09' >
+            <label for ="a109_09">Native Hawaiian or Other Pacific Islander</label>
+            <br>
+            <input type='checkbox' name ='q109' value ='a109_10' >
+            <label for ="a109_10">South Asian or Indian</label>
+            <input type='checkbox' name ='q109' value ='a109_11' >
+            <label for ="a109_11">Vietnamese</label>
+            <input type='checkbox' name ='q109' value ='a109_12' >
+            <label for ="a109_12">Other Asian Origin</label>
+            <input type='checkbox' name ='q109' value ='a109_13' >
+            <label for ="a109_13">White, Caucasian, or European</label>
+            <input type='checkbox' name ='q109' value ='a109_14' >
+            <label for ="a109_14">Other race, ethinicity, or origin</label>
+             <br>
+            <input type='checkbox' name ='q109' value ='a109_15' >
+            <label for ="a109_15">Skip/I prefer not to answer</label>
+            <br>
+            </fieldset>
+          </div>
        <h3>Home qualities</h3>
           <label for="q201">What year was your home built?</label>
           <select id="q201">
@@ -328,49 +341,83 @@
           </select>
 
           <br>
-
-          <label for="q216">Do you feel drafts or temperature differences in your home coming from any of the following?</label>
-          <select id="q216">
-            <option selected disabled hidden style='display: none' value=''></option>
-            <option value="a216_01">Exterior doors</option>
-            <option value="a216_02">Windows</option>
-            <option value="a216_03">Pet doors</option>
-            <option value="a216_04">Doors that lead to the basement</option>
-            <option value="a216_05">Doors that lead to the garage</option>
-            <option value="a216_06">Attic hatches</option>
-            <option value="a216_07">Built in shelves</option>
-            <option value="a216_08">Ventilation systems</option>
-            <option value="a216_09">Recessed lighting fixtures</option>
-            <option value="a216_10">Plumbing fixtures</option>
-            <option value="a216_11">Electrical outlets</option>
-            <option value="a216_12">Fireplaces/wood stoves</option>
-            <option value="a216_13">Window or wall air conditioner</option>
-            <option value="a216_14">Kitchen cabinet or soffit</option>
-            <option value="a216_15">I’m unable to tell</option>
-            <option value="a216_16">Skip/I don't know</option>
-          </select>
-
+          <div>
+          <fieldset>
+        <label for="q216">Do you feel drafts or temperature differences in your home coming from any of the following?</label>
           <br>
-
-          <label for="q217">Are you concerned or experiencing issues with any of the following?</label>
-          <select id="q217">
-            <option selected disabled hidden style='display: none' value=''></option>
-            <option value="q217_01">Interior air quality due to wildfire smoke/particulate matter infiltration</option>
-            <option value="q217_02">Interior air quality due to stagnant airflow</option>
-            <option value="q217_03">Lead presence in water</option>
-            <option value="q217_04">Lead presence in paint</option>
-            <option value="q217_05">Water intrusion during rain events</option>
-            <option value="q217_06">Plumbing leaks</option>
-            <option value="q217_07">Seismic integrity</option>
-            <option value="q217_08">Radon gas</option>
-            <option value="q217_09">Fire vulnerability</option>
-            <option value="q217_10">Noise</option>
-            <option value="q217_11">Losing power</option>
-            <option value="q217_12">Vermin</option>
-            <option value="q217_13">Skip/I don't know</option>
-          </select>
-
+          <input type='checkbox' name ='q216' value ='a216_01' >
+          <label for ="a216_01">Exterior doors</label>
+          <input type='checkbox' name ='q216' value ='a216_02' >
+          <label for ="a216_02">Windows</label>
+          <input type='checkbox' name ='q216' value ='a216_03' >
+          <label for ="a216_03">Pet doors</label>
+          <input type='checkbox' name ='q216' value ='a216_04' >
+          <label for ="a216_04">Doors that lead to the basement</label>
+          <input type='checkbox' name ='q216' value ='a216_05' >
+          <label for ="a216_05">Doors that lead to the garage</label>
+           <br>
+          <input type='checkbox' name ='q216' value ='a216_06' >
+          <label for ="a216_06">Attic hatches</label>
+          <input type='checkbox' name ='q216' value ='a216_07' >
+          <label for ="a216_07">Built in shelves</label>
+          <input type='checkbox' name ='q216' value ='a216_08' >
+          <label for ="a216_08">Ventilation systems</label>
+          <input type='checkbox' name ='q216' value ='a216_09' >
+          <label for ="a216_09">Recessed lighting fixtures</label>
+          <input type='checkbox' name ='q216' value ='a216_10' >
+          <label for ="a216_10">Plumbing fixtures</label>
           <br>
+          <input type='checkbox' name ='q216' value ='a216_11' >
+          <label for ="a216_11">Electrical outlets</label>
+          <input type='checkbox' name ='q216' value ='a216_12' >
+          <label for ="a216_12">Fireplaces/wood stoves</label>
+          <input type='checkbox' name ='q216' value ='a216_13' >
+          <label for ="a216_13">Window or wall air conditioner</label>
+          <input type='checkbox' name ='q216' value ='a216_14' >
+          <label for ="a216_14">Kitchen cabinet or soffit</label>
+           <br>
+          <input type='checkbox' name ='q216' value ='a216_15' >
+          <label for ="a216_15">I’m unable to tell</label>
+          <input type='checkbox' name ='q216' value ='a216_16' >
+          <label for ="a216_16">Skip/I don't know</label>
+          </fieldset>
+        </div>
+
+        <div>
+        <fieldset>
+        <label for="q217">Are you concerned or experiencing issues with any of the following?</label>
+        <br>
+        <input type='checkbox' name ='q217' value ='a217_01' >
+        <label for ="a217_01">Interior air quality due to wildfire smoke/particulate matter infiltration</label>
+        <input type='checkbox' name ='q217' value ='a217_02' >
+        <label for ="a217_02">Interior air quality due to stagnant airflow</label>
+        <br>
+        <input type='checkbox' name ='q217' value ='a217_03' >
+        <label for ="a217_03">Lead presence in water</label>
+        <input type='checkbox' name ='q217' value ='a217_04' >
+        <label for ="a217_04">Lead presence in paint</label>
+        <input type='checkbox' name ='q217' value ='a217_05' >
+        <label for ="a217_05">Water intrusion during rain events</label>
+        <input type='checkbox' name ='q217' value ='a217_06' >
+        <label for ="a217_06">Plumbing leaks</label>
+        <input type='checkbox' name ='q217' value ='a217_07' >
+        <label for ="a217_07">Seismic integrity</label>
+        <br>
+        <input type='checkbox' name ='q217' value ='a217_08' >
+        <label for ="a217_08">Radon gas</label>
+        <input type='checkbox' name ='q217' value ='a217_09' >
+        <label for ="a217_09">Fire vulnerability</label>
+        <input type='checkbox' name ='q217' value ='a217_10' >
+        <label for ="a217_10">Exterior noise</label>
+        <input type='checkbox' name ='q217' value ='a217_11' >
+        <label for ="a217_11">Losing power</label>
+        <input type='checkbox' name ='q217' value ='a217_12' >
+        <label for ="a217_12">Vermin</label>
+        <input type='checkbox' name ='q217' value ='a217_13' >
+        <label for ="a217_13">Skip/I don't know</label>
+        </fieldset>
+      </div>
+
        <h3>HVAC information</h3>
           <label for="q301">What is your home's primary heating system?</label>
           <select id="q301">
@@ -522,17 +569,22 @@
           </select>
 
           <br>
-
+          <div>
+          <fieldset>
           <label for="q311">Does your home's ductwork run within any of the following?</label>
-          <select id="q311">
-            <option selected disabled hidden style='display: none' value=''></option>
-            <option value="q311_01">Crawlspace</option>
-            <option value="q311_02">Attic</option>
-            <option value="q311_03">Walls</option>
-            <option value="q311_04">Floors</option>
-            <option value="q311_05">Skip/I don't know</option>
-          </select>
           <br>
+          <input type='checkbox' name ='q311' value ='a311_01' >
+          <label for ="a311_01">Crawlspace</label>
+          <input type='checkbox' name ='q311' value ='a311_02' >
+          <label for ="a311_02">Attic</label>
+          <input type='checkbox' name ='q311' value ='a311_03' >
+          <label for ="a311_03">Walls</label>
+          <input type='checkbox' name ='q311' value ='a311_04' >
+          <label for ="a311_04">Floors</label>
+          <input type='checkbox' name ='q311' value ='a311_05' >
+          <label for ="a311_05">Skip/I don't know</label>
+          </fieldset>
+        </div>
           </div>
           </div>
 
@@ -734,98 +786,13 @@
           </div>
          </form>
 <! Recommendations begin below >
-        <div class="col-sm-6 second-column">
-        <ul>
-<! Customer facing recommendations>
-        <p>Recommendations on how to improve the XXX of your home:</p>
-<!Utilities>
-        <div id="pgetest">
-          <dl>
-          <dt>Your electric utility provider <a href="https://portlandgeneral.com/">Portland General Electric</a> has more energy efficiency tips. Including:
-            <li><a href="https://portlandgeneral.com/save-money/save-money-home/special-offers-incentives">PGE cash back rebates and special offers</a></li>
-            <li><a href="https://portlandgeneral.com/save-money/save-money-home/peak-time-rebates">Peak time rebates</a></li>
-            <li><a href="https://portlandgeneral.com/save-money/save-money-home/energy-tracker-home">PGE Energy Tracker</a></li>
-            <li><a href="https://portlandgeneral.com/save-money/save-money-home/no-cost-and-low-cost-tips">PGE No Cost Tips</a></li>
-          </dt>
-        </dl>
-        </div>
-        <div id="pactest">
-          <dl>
-          <dt>Your electric utility provider <a href="https://www.pacificpower.net/">Pacific Power</a> has more energy efficiency tips. Including:
-            <li><a href="https://www.pacificpower.net/savings-energy-choices/home/usage-insights-home-energy-reports.html">Usage insights</a></li>
-            <li><a href="https://www.pacificpower.net/savings-energy-choices/home/energy-usage-calculator.html">Energy usage calculator</a></li>
-          </dt>
-        </dl>
-        </div>
-        <div id="nwntest">
-          <dl>
-          <dt>Your natural gas utility provider <a href="https://www.nwnatural.com/">NW Natural</a> has more energy efficiency tips. Including:
-            <li><a href="https://www.nwnatural.com/ways-to-save/rebates-offers">Rebates and offers</a></li>
-          </dt>
-        </dl>
-        </div>
-        <div id="cngwebsite">
-          <li>Visit <a href="https://portlandgeneral.com/">Cascade Natural Gas</a> for more energy efficiency tips.</li>
-        </div>
-        <div id="aviwebsite">
-          <li>Visit <a href="https://portlandgeneral.com/">Avista</a> for more energy efficiency tips.</li>
-        </div>
-        <div id="dei">
-        <li>You may qualify for DEI things.</li>
-        </div>
-<!Insulation>
-        <div id="insulation">
-          <h4>Insulation:</h4>
-          <div id="insulation_pre_1978">
-          <li>Insulation is one of the most cost-effective ways to prepare your home for any weather and season. Homes built before 1978 typically have about 75% less insulation than homes built to today's standards. The better the insulation, the less your heating and cooling system has to work to maintain comfortable temperatures. Consider evaluating the amount and condition of your home’s insulation.</li>
-        </div>
-        <div id="insulation_post_1978">
-          <li>Insulation is one of the most cost-effective ways to prepare your home for any weather and season. Homes built before 2008 typically have less insulation than homes built to today’s standards. The better the insulation, the less your heating and cooling system has to work to maintain comfortable temperatures. Consider evaluating the condition of your home’s insulation.</li>
-        </div>
+        <div class = "second-column">
+        <h3>Applicable Recommendations:</h3>
+          <h4>Energy Efficiency:</h4>
+            <h5>Utilities:</h5>
+              <h6>PGE</h6>
+              <h6>Pacific Power</h6>
+            <h5>Energy Trust of Oregon:</h5>
       </div>
-<!--windows>
-      <div id="windows">
-        <h4>Windows:</h4>
-        <div id="windows_pre_1978">
-        <li>Choose energy-efficient windows to stay warmer in winter, cooler in summer and reduce drafts and noise. Homes built before 1978 typically have windows with a lower u-value than homes built to today's standards.</li>
-      </div>
-      <div id="windows_post_1978">
-        <li>Choose energy-efficient windows to stay warmer in winter, cooler in summer and reduce drafts and noise. Homes built before 2008 typically have windows with a lower u-value than homes built to today's standards.</li>
-      </div>
-      <div id="windows_diy">
-        <li>For tips on how to evaluate and install insulation in your home to improve energy efficiency, click here.</li>
-      </div>
-      <div id="windows_non_diy">
-        <li>Contact a local contractor to help determine how improved insulation can benefit the efficiency of your home.</li>
-      </div>
-    </div>
-  -->
-<!DIY Recommendations>
-  <div id = "alldiy">
-    <h3>DIY Tips:</h3>
-    <div id="diy_insulation">
-      <li>For tips on how to evaluate and install insulation in your home to improve energy efficiency, click here.</li>
-    </div>
   </div>
-  <div id = "professional_tips">
-    <h3>Help from a professional:</h3>
-    <div id="pro_insulation">
-      <li>Contact a professional contractor to evaluate your home's insulation.</li>
-    </div>
-  </div>
-<! Stored information to clue in future marketing efforts/market trends>
-        <p>From this assessment, Energy Trust has learned the following about this customer:</p>
-        <div id="SWR">
-          <li>Customer is annual household income and full time resident is met.</li>
-        </div>
-        <div id="diyyes">
-          <li>This customer is a frequent DIYer and should be contacted with relevant offers</li>
-        </div>
-        <div id="diyno">
-        <li>This customer prefers hiring professionals and will be less interested in DIY information</li>
-        </div>
-        <div id="diymaybe">
-        <li>This customer has indicated they are intereseted in DIY project but does not routinely do DIy</li>
-        </div>
-  </ul>
 </html>

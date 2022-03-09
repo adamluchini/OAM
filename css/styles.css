@@ -19,7 +19,7 @@ abbr {
   background: lightgreen;
   color: black;
   font-size: 12px;
-  display: flex;
+  float: left;
   padding-left: 20px
 }
 

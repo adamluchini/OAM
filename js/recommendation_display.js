@@ -1,12 +1,11 @@
 $(document).ready(function() {
 
   $("form#questions").submit(function(event) {
-  var q101 = $("select#q101").val();
-  var q101test = [];
-      $('input[name=q101test]:checked').each(function(){
-          q101test.push($(this).val());
+  var q101 = [];
+      $('input[name=q101]:checked').each(function(){
+          q101.push($(this).val());
     });
-    q101test = q101test.join(" ");
+    q101 = q101.join(" ");
   var q102 = $("select#q102").val();
   var q103 = $("select#q103").val();
   var q104 = $("select#q104").val();
@@ -14,7 +13,11 @@ $(document).ready(function() {
   var q106 = $("select#q106").val();
   var q107 = $("select#q107").val();
   var q108 = $("select#q108").val();
-  var q109 = $("select#q109").val();
+  var q109 = [];
+      $('input[name=q109]:checked').each(function(){
+          q109.push($(this).val());
+    });
+    q109 = q109.join(" ");
   var q201 = $("select#q201").val();
   var q202 = $("select#q202").val();
   var q203 = $("select#q203").val();
@@ -30,8 +33,16 @@ $(document).ready(function() {
   var q213 = $("select#q213").val();
   var q214 = $("select#q214").val();
   var q215 = $("select#q215").val();
-  var q216 = $("select#q216").val();
-  var q217 = $("select#q217").val();
+  var q216 = [];
+      $('input[name=q216]:checked').each(function(){
+          q216.push($(this).val());
+    });
+    q216 = q216.join(" ");
+  var q217 = [];
+      $('input[name=q217]:checked').each(function(){
+          q217.push($(this).val());
+    });
+    q217 = q217.join(" ");
   var q301 = $("select#q301").val();
   var q302 = $("select#q302").val();
   var q303 = $("select#q303").val();
@@ -42,18 +53,38 @@ $(document).ready(function() {
   var q308 = $("select#q308").val();
   var q309 = $("select#q309").val();
   var q310 = $("select#q310").val();
-  var q311 = $("select#q311").val();
+  var q311 = [];
+      $('input[name=q311]:checked').each(function(){
+          q311.push($(this).val());
+    });
+    q311 = q311.join(" ");
   var q312 = $("select#q312").val();
   var q313 = $("select#q313").val();
   var q314 = $("select#q314").val();
 
-var checkboxtest = 0;
-
-if (q101test === "a101_01" || q101test === "a101_02") {
+/* Running customer selection variable list
+if (q101.includes("a101_01")) {
   checkboxtest ++;
-}
+}*/
 
-    console.log("q101test:", (q101test));
+/* What the customer is interested in learning */
+var energy_efficiency = 0;
+var comfort = 0;
+var health_safety = 0;
+
+/* Customer ethnicity */
+
+/* Customer temperature differences */
+
+/* Experiencing issues with */
+
+/* Ductwork location*/
+
+    console.log("Customer is interested in:", (q101));
+    console.log("Customer ethnicity:", (q109));
+    console.log("Temperature differences:", (q216));
+    console.log("Experincing issues with:", (q217));
+    console.log("Ductwork location:", (q311));
     console.log("dropdown:", (checkboxtest));
     event.preventDefault();
    });
