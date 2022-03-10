@@ -12,7 +12,8 @@ abbr {
     color: black;
     font-size: 12px;
     display: flex;
-    padding-left: 20px
+    padding-left: 20px;
+    inline-size: min-content;
 
 }
 .second-column {
@@ -20,11 +21,28 @@ abbr {
   color: black;
   font-size: 12px;
   float: left;
+  padding-left: 20px;
+  inline-size: 500px;
+}
+
+.energy_efficiency {
+  color: black;
+  font-size: 12px;
+  float: left;
   padding-left: 20px
+}
+.diy-experienced {
+}
+.diy-interested {
+}
+.professional-services {
 }
 
 /*# is for HTML elements that are hidden from view and an action in JavaScript will display them. */
 
-#pgewebsite, #pacwebsite, #nwnwebsite, #cngwebsite, #aviwebsite, #dei, #diyyes, #diyno, #diymaybe, #insulation_pre_1978, #insulation_post_1978, #insulation_diy, #insulation_non_diy, #pgetest, #pactest, #nwntest, #insulation, #windows, #alldiy, #professional_tips {
-  display: none;
+#pge, #pac, #nwn, #cng, #avi, #no_utility, #insulation-recommendations {
+}
+
+#retrofit-work {
+  display:none;
 }
